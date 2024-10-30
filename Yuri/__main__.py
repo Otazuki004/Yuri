@@ -7,4 +7,4 @@ async def on_ready():
 	await ch.send('I woke up...')
 
 if __name__ == '__main__':
-  Yuri.run("MTMwMDc3MzE1NTc0ODQ0NjIyOA.G3-FOg.2lD4_Ce4h_RRowM2kvbaa4W-Gisqf15GAbVYk8")
+  Yuri.run("MTMwMDc3MzE1NTc0ODQ0NjIyOA.GYwcJc.orN-WPFe1hVCnsppCAsqK4AtkzMhLt0MlBzpz8")
