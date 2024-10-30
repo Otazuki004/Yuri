@@ -1,5 +1,6 @@
 from discord import *
 from Yuri import *
+from Yuri import Yuri
 
 @Yuri.event
 async def on_ready():
