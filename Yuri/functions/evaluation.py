@@ -1,6 +1,9 @@
-from Yuri import Yuri
+import sys
+import io
+import traceback
 from discord.ext import commands
-from discord import *
+from discord import File
+from Yuri import Yuri
 
 @Yuri.command("eval")
 async def eval(ctx):
