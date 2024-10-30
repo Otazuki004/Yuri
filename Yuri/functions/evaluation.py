@@ -1,5 +1,5 @@
 from Yuri import Yuri
-from discord.ext import *
+from discord.ext import commands
 from discord import *
 
 @Yuri.command("eval")
