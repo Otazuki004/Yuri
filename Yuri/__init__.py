@@ -11,4 +11,6 @@ logging.basicConfig(
 intents = Intents.default()
 intents.message_content = True 
 
+TOKEN = os.getenv('TOKEN')
+
 Yuri = commands.Bot(command_prefix="!", intents=intents)
