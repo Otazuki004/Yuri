@@ -4,7 +4,9 @@ import traceback
 from discord.ext import commands
 from discord import File
 from Yuri import Yuri
+from Yuri.decorator.filter_user import filter_user
 
+@filter_user('otazuki')
 async def evall(ctx):
     if len(ctx.message.content.split()) < 2:
         return await ctx.send("Please enter code to run it!")
