@@ -2,7 +2,7 @@ import sys
 import io
 import traceback
 from discord.ext import commands
-from discord import File
+from discord import File, Embed
 from Yuri import Yuri
 from Yuri.decorator.filter_user import filter_user
 
@@ -36,7 +36,8 @@ async def evall(ctx, *args, **kwargs):
             out_file.name = "eval_output.txt"
             await ctx.send("Output too big, sending as file:", file=File(out_file))
     else:
-        await ctx.send(f"```python\n{output_code}```")
+        embed = Embed(title="Output", description=f"```python\n{output_code}```", color=0x1E90FF)
+        await ctx.send(embed=embed)
     await stats.delete()      
 
 async def setup(Yuri):
