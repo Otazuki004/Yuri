@@ -5,7 +5,11 @@ from discord.ext import commands
 from discord import File
 from Yuri import Yuri
 
-@Yuri.command("eval")
+class Evaluation(commands.Cog):
+    def __init__(self, Yuri):
+        self.Yuri = Yuri
+
+@commands.command(name="eval")
 async def evall(ctx):
     if len(ctx.message.content.split()) < 2:
         return await ctx.send("Please enter code to run it!")
