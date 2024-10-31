@@ -7,7 +7,7 @@ from Yuri import Yuri
 from Yuri.decorator.filter_user import filter_user
 
 @filter_user('otazuki')
-async def evall(ctx):
+async def evall(ctx, *args, **kwargs):
     if len(ctx.message.content.split()) < 2:
         return await ctx.send("Please enter code to run it!")
     stats = await ctx.send("Loading...")
