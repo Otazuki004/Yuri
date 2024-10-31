@@ -9,8 +9,10 @@ logging.basicConfig(
     level=logging.INFO,
 )
 
+intents = discord.Intents.all()
 intents = Intents.default()
-intents.message_content = True 
+member.message = True
+member.message_content = True
 
 TOKEN = os.getenv('TOKEN')
 
