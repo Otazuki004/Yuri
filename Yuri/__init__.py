@@ -15,7 +15,7 @@ intents.message_content = True
 intents.members = True 
 
 TOKEN = os.getenv('TOKEN')
-Yuri = commands.Bot(command_prefix="!", intents=intents)
+Yuri = commands.Bot(command_prefix=['!', '.'], intents=intents)
 
 async def load_mods():
     logging.info('Loading modules...')
