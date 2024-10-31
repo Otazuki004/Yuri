@@ -8,7 +8,7 @@ async def log_cmd(ctx, *args, **kwargs):
     stats = await ctx.reply('Loading...')
     log = r('tail log.txt')
     await stats.delete()
-    embed = Embed(title='Log output', description=f"```python\n{log}```", color='0xFF0000')
+    embed = Embed(title='Log output', description=f"```python\n{log}```", color=0xFF0000)
     await ctx.reply(embed=embed)
 
 async def setup(Yuri):
