@@ -9,11 +9,10 @@ logging.basicConfig(
     level=logging.INFO,
 )
 
-intents = discord.Intents.all()
 intents = discord.Intents.default()
-member.message = True
-member.message_content = True
+intents.messages = True
+intents.message_content = True
+intents.members = True 
 
 TOKEN = os.getenv('TOKEN')
-
 Yuri = commands.Bot(command_prefix="!", intents=intents)
