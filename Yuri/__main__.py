@@ -9,7 +9,7 @@ async def on_ready():
 
 async def start():
 	await load_mods()
-	await Yuri.run(TOKEN)
+	Yuri.run(TOKEN)
 	
 if __name__ == '__main__':
 	asyncio.run(start())
