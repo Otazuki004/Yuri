@@ -6,7 +6,7 @@ from discord import File
 from Yuri import Yuri
 
 @Yuri.command("eval")
-async def eval(ctx):
+async def evall(ctx):
     if len(ctx.message.content.split()) < 2:
         return await ctx.send("Please enter code to run it!")
     stats = await ctx.send("Loading...")
