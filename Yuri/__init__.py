@@ -10,7 +10,7 @@ logging.basicConfig(
 )
 
 intents = discord.Intents.all()
-intents = Intents.default()
+intents = discord.Intents.default()
 member.message = True
 member.message_content = True
 
