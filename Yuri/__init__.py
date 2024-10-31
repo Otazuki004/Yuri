@@ -18,9 +18,9 @@ TOKEN = os.getenv('TOKEN')
 Yuri = commands.Bot(command_prefix="!", intents=intents)
 
 logging.info('Loading modules...')
-for fn in os.listdir('functions'):
+for fn in os.listdir('Yuri.functions'):
     if fn.endswith('.py') and not fn.startswith('__'):
-        Yuri.load_extension(f'./functions.{fn[:-3]}')
+        Yuri.load_extension(f'Yuri.functions.{fn[:-3]}')
         logging.info(fn)
 
 logging.info('All modules loaded successfully.')
