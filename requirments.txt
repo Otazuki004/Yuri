@@ -1,1 +1,2 @@
-athula onu ila kila potru
+requests
+discord.py
