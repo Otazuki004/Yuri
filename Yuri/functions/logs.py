@@ -12,4 +12,5 @@ async def log_cmd(ctx, *args, **kwargs):
     await ctx.reply(embed=embed)
 
 async def setup(Yuri):
-    Yuri.add_command(commands.Command(log_cmd, name=['log', 'logs']))
+    for name in ['log', 'logs']:
+        Yuri.add_command(commands.Command(log_cmd, name=name))
