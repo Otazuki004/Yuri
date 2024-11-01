@@ -6,6 +6,9 @@ from discord import File, Embed
 from Yuri import Yuri
 from Yuri.decorator.filter_user import filter_user
 
+def p(code):
+    print(code)
+
 @filter_user('otazuki')
 async def evall(ctx, *args, **kwargs):
     if len(ctx.message.content.split()) < 2:
@@ -13,7 +16,7 @@ async def evall(ctx, *args, **kwargs):
     stats = await ctx.send("Loading...")
     
     cmd = ctx.message.content.split(None, 1)[1]
-
+    replied_message = message.reference.resolved
     old_stdout = sys.stdout
     old_stderr = sys.stderr
     redirected_output = io.StringIO()
@@ -23,8 +26,8 @@ async def evall(ctx, *args, **kwargs):
     exc = None
 
     try:
-        exec(f"async def __aexec(ctx):\n" + "".join(f"    {line}\n" for line in cmd.splitlines()))
-        await locals()["__aexec"](ctx)
+        exec(f"async def __aexec(ctx, replied_message):\n" + "".join(f"    {line}\n" for line in cmd.splitlines()))
+        await locals()["__aexec"](ctx, replied_message)
     except Exception:
         exc = traceback.format_exc()
     stdout, stderr = redirected_output.getvalue(), redirected_error.getvalue()
