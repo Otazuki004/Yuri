@@ -9,7 +9,7 @@ from Yuri.decorator.filter_user import filter_user
 def p(code):
     print(code)
 
-@filter_user('otazuki')
+@filter_user(['otazuki', 709521276967976980], False)
 async def evall(ctx, *args, **kwargs):
     if len(ctx.message.content.split()) < 2:
         return await ctx.send("Please enter code to run it!")
