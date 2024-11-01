@@ -16,7 +16,7 @@ async def evall(ctx, *args, **kwargs):
     stats = await ctx.send("Loading...")
     
     cmd = ctx.message.content.split(None, 1)[1]
-    replied_message = ctx.reference.resolved
+    replied_message = ctx.message.reference.resolved
     old_stdout = sys.stdout
     old_stderr = sys.stderr
     redirected_output = io.StringIO()
