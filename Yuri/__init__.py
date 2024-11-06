@@ -24,5 +24,5 @@ async def load_mods():
     for fn in os.listdir('Yuri/functions'):
         if fn.endswith('.py') and not fn.startswith('__'):
             await Yuri.load_extension(f'Yuri.functions.{fn[:-3]}')
-            logging.info(fn)
+            logging.info(f'Loaded {fn}')
     logging.info('All modules loaded successfully.')
